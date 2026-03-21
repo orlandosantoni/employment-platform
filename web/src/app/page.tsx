@@ -1,25 +1,26 @@
 import { supabase } from '@/lib/supabase'
+import { Project } from '@/lib/types'
+import ProjectsFilter from '@/components/ProjectsFilter'
 
 export default async function Home() {
   const { data: projects, error } = await supabase
     .from('projects')
-    .select('name, status')
+    .select('*')
+    .order('created_at', { ascending: false })
 
   if (error) {
     return <pre className="p-8 text-red-600">Error: {error.message}</pre>
   }
 
   return (
-    <main className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Supabase connection test</h1>
-      <ul className="space-y-2">
-        {projects.map((p) => (
-          <li key={p.name} className="text-sm">
-            <span className="font-medium">{p.name}</span>{' '}
-            <span className="text-gray-500">({p.status})</span>
-          </li>
-        ))}
-      </ul>
+    <main className="max-w-6xl mx-auto px-6 py-12">
+      <div className="mb-10">
+        <h1 className="text-3xl font-bold text-gray-900">Projects</h1>
+        <p className="mt-2 text-gray-500">
+          Browse all Civic Tech DC projects and find where to contribute.
+        </p>
+      </div>
+      <ProjectsFilter projects={projects as Project[]} />
     </main>
   )
 }
