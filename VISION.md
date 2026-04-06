@@ -81,8 +81,8 @@ The goal here is to get something working quickly that organizes existing projec
 - [x] Projects listing page — browse all projects with status badge and tags
 - [x] Individual project page — description, status, team, open roles
 - [x] Basic filtering — by status and by skill/technology tag
-- [ ] Team member tiles — name, role, optional photo
-- [ ] Individual volunteer profile page
+- [x] Team member tiles — name, role, optional photo
+- [x] Individual volunteer profile page
 - [ ] Contact button — opens email to project admin
 - [ ] Admin-managed content — no self-service yet, data is entered/updated by an admin
 

@@ -135,7 +135,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
 function MemberTile({ member }: { member: ProjectWithDetails['project_members'][number] }) {
   const v = member.volunteers
   return (
-    <div className="flex items-center gap-3">
+    <Link href={`/volunteers/${v.id}`} className="flex items-center gap-3 group">
       {v.avatar_url ? (
         <img src={v.avatar_url} alt={v.name} className="w-9 h-9 rounded-full object-cover" />
       ) : (
@@ -144,11 +144,11 @@ function MemberTile({ member }: { member: ProjectWithDetails['project_members'][
         </div>
       )}
       <div>
-        <p className="text-sm font-medium text-gray-900">{v.name}</p>
+        <p className="text-sm font-medium text-gray-900 group-hover:underline">{v.name}</p>
         {member.role_title && (
           <p className="text-xs text-gray-500">{member.role_title}</p>
         )}
       </div>
-    </div>
+    </Link>
   )
 }
