@@ -78,9 +78,9 @@ There is a distinction between:
 ### Phase 1 — MVP: Project Directory
 The goal here is to get something working quickly that organizes existing projects and teams, even if all data is admin-managed.
 
-- [ ] Projects listing page — browse all projects with status badge and tags
-- [ ] Individual project page — description, status, team, open roles
-- [ ] Basic filtering — by status and by skill/technology tag
+- [x] Projects listing page — browse all projects with status badge and tags
+- [x] Individual project page — description, status, team, open roles
+- [x] Basic filtering — by status and by skill/technology tag
 - [ ] Team member tiles — name, role, optional photo
 - [ ] Individual volunteer profile page
 - [ ] Contact button — opens email to project admin
