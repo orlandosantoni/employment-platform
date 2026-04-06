@@ -41,7 +41,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       {/* Back */}
-      <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-8 inline-block">
+      <Link href="/" className="text-sm text-brand-blue hover:underline mb-8 inline-block">
         ← All Projects
       </Link>
 
@@ -126,7 +126,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
 function MemberTile({ member }: { member: ProjectWithDetails['project_members'][number] }) {
   const v = member.volunteers
   return (
-    <Link href={`/volunteers/${v.id}`} className="flex items-center gap-3 group">
+    <Link href={`/volunteers/${v.id}`} className="flex items-center gap-3 group w-fit">
       {v.avatar_url ? (
         <img src={v.avatar_url} alt={v.name} className="w-9 h-9 rounded-full object-cover" />
       ) : (
@@ -135,7 +135,7 @@ function MemberTile({ member }: { member: ProjectWithDetails['project_members'][
         </div>
       )}
       <div>
-        <p className="text-sm font-medium text-gray-900 group-hover:underline">{v.name}</p>
+        <p className="text-sm font-medium text-brand-blue group-hover:underline">{v.name}</p>
         {member.role_title && (
           <p className="text-xs text-gray-500">{member.role_title}</p>
         )}

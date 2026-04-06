@@ -42,7 +42,7 @@ export default async function VolunteerPage(props: PageProps<'/volunteers/[id]'>
   return (
     <main className="max-w-3xl mx-auto px-6 py-12">
       {/* Back */}
-      <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-8 inline-block">
+      <Link href="/" className="text-sm text-brand-blue hover:underline mb-8 inline-block">
         ← All Projects
       </Link>
 
@@ -110,10 +110,10 @@ export default async function VolunteerPage(props: PageProps<'/volunteers/[id]'>
               <Link
                 key={project.id}
                 href={`/projects/${project.slug}`}
-                className="flex items-center justify-between border border-gray-100 rounded-lg p-4 bg-white hover:border-gray-200 hover:shadow-sm transition-all"
+                className="flex items-center justify-between border-2 border-brand-gold rounded-lg p-4 bg-white hover:shadow-sm transition-all"
               >
                 <div>
-                  <p className="font-medium text-gray-900 text-sm">{project.name}</p>
+                  <p className="font-medium text-brand-blue text-sm">{project.name}</p>
                   {project.role_title && (
                     <p className="text-xs text-gray-500 mt-0.5">
                       {project.is_lead ? `${project.role_title} · Lead` : project.role_title}

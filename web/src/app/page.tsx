@@ -13,14 +13,18 @@ export default async function Home() {
   }
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-12">
-      <div className="mb-10">
-        <h1 className="text-3xl font-bold text-gray-900">Projects</h1>
-        <p className="mt-2 text-gray-500">
-          Browse all Civic Tech DC projects and find where to contribute.
-        </p>
+    <>
+      <div className="bg-brand-blue text-white py-14 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold mb-3">Current and past projects</h1>
+          <p className="text-blue-100 text-lg max-w-xl">
+            See what Civic Tech DC is working on and find where you can contribute.
+          </p>
+        </div>
       </div>
-      <ProjectsFilter projects={projects as Project[]} />
-    </main>
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <ProjectsFilter projects={projects as Project[]} />
+      </main>
+    </>
   )
 }

@@ -5,9 +5,9 @@ import StatusBadge from './StatusBadge'
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/projects/${project.slug}`}>
-      <div className="group border border-gray-100 rounded-xl p-6 hover:border-gray-200 hover:shadow-md transition-all bg-white h-full flex flex-col gap-4">
+      <div className="group border-2 border-brand-gold rounded-xl p-6 hover:shadow-md transition-all bg-white h-full flex flex-col gap-4">
         <div className="flex items-start justify-between gap-4">
-          <h2 className="text-lg font-semibold text-gray-900 group-hover:text-black leading-tight">
+          <h2 className="text-lg font-semibold text-brand-blue group-hover:underline leading-tight">
             {project.name}
           </h2>
           <StatusBadge status={project.status} />

@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: light;
-  }
+@theme {
+  --color-brand-blue: #005ea2;
+  --color-brand-gold: #f5c518;
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-merriweather), Georgia, serif;
 }
 
 body {
-  background: #f9fafb;
+  font-family: var(--font-sans);
+  background: #ffffff;
   color: #111827;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
 }
