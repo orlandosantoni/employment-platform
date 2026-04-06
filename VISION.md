@@ -83,8 +83,9 @@ The goal here is to get something working quickly that organizes existing projec
 - [x] Basic filtering — by status and by skill/technology tag
 - [x] Team member tiles — name, role, optional photo
 - [x] Individual volunteer profile page
-- [ ] Contact button — opens email to project admin
-- [ ] Admin-managed content — no self-service yet, data is entered/updated by an admin
+- [x] Admin-managed content — no self-service yet, data is entered/updated by an admin
+
+> **Decision:** Dropped per-project contact buttons as the Civic Tech DC website already points to an existing Slack group and is the most common form of communication. A proper join request flow will come in Phase 2.
 
 ### Phase 2 — Self-Service: Accounts & Profiles
 - [ ] Invite-based account creation for volunteers

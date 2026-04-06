@@ -117,15 +117,6 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
             </section>
           )}
 
-          {/* Contact */}
-          {p.contact_email && (
-            <a
-              href={`mailto:${p.contact_email}`}
-              className="block w-full text-center bg-gray-900 text-white text-sm font-medium px-4 py-3 rounded-lg hover:bg-gray-700 transition-colors"
-            >
-              Contact this project
-            </a>
-          )}
         </div>
       </div>
     </main>
