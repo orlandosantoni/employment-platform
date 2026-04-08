@@ -11,6 +11,9 @@ export default function Header() {
           <Link href="/" className="text-sm text-gray-600 hover:text-brand-blue transition-colors">
             Projects
           </Link>
+          <Link href="/jobs" className="text-sm text-gray-600 hover:text-brand-blue transition-colors">
+            Open Roles
+          </Link>
           <a
             href="https://www.civictechdc.org"
             target="_blank"
